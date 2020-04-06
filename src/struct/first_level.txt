@@ -1,0 +1,6 @@
+create creates declares declare
+define defines
+use uses
+access accesses
+initialize initializes initialization
+compare compares

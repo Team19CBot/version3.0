@@ -1,0 +1,89 @@
+#
+30000
+Operator in C basically is relational operators and arithmetic operators.
+
+#
+30100
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#
+100
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#
+30200
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#
+200
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#
+30300
+Memory address operator is &, which is used to obtain the memory address of variable.
+For example,
+int  i = 0;
+printf("%p", &i);
+
+#
+300
+Memory address operator is &, which is used to obtain the memory address of variable.
+For example,
+int  i = 0;
+printf("%p", &i);
+
+#
+30400
+> < >= <= == !=
+Comparison of two values is done with double equals ==
+Not equals is !=
+For greater/less than or equals to, the equals sign must be the second character >= <=
+
+#
+400
+> < >= <= == !=
+Comparison of two values is done with double equals ==
+Not equals is !=
+For greater/less than or equals to, the equals sign must be the second character >= <=
+
+#
+500
++-*/%()
+1)Be careful that some are not written the same as in maths (eg, ^ is not raising a number to a power)
+2)Assignment of a value is done with a single equal =
+3)Operations involving multiple types have explicit and implicit conversions.
+4)The types involved can influence the result of the expression.
+
+#
+30500
++-*/%()
+1)Be careful that some are not written the same as in maths (eg, ^ is not raising a number to a power)
+2)Assignment of a value is done with a single equal =
+3)Operations involving multiple types have explicit and implicit conversions.
+4)The types involved can influence the result of the expression.
+
+#
+30001
+Dereference operator is *
+
+#
+10001
+int b = 3
+int *p = b;
+*p = 4;
+
+Then b is 4
+
+#
+1
+Dereference operator is *
+
+int b = 3
+int *p = b;
+*p = 4;
+
+Then b is 4

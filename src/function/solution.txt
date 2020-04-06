@@ -1,0 +1,178 @@
+#what#NONE#main#
+All C programs require a main function. Prgram starts at the beginning of main function and ends at the end of main function.
+For example,
+int main() {
+	...
+}
+or 
+int main(int argc, char *argv[]) {
+	...
+}
+
+#NONE#NONE#main#
+All C programs require a main function. Prgram starts at the beginning of main function and ends at the end of main function.
+For example,
+int main() {
+	...
+}
+or 
+int main(int argc, char *argv[]) {
+	...
+}
+
+#what#NONE#NONE#
+1. Individual, stand-alone units of functionality
+2. Sequences of instructions that can act on different data
+3. Can take parameters (or arguments) as input
+4. Can return a value
+
+#how#external#NONE#
+Use '#include' and 'extern' and header files to indicate where functions are defined.
+
+#NONE#external#NONE#
+Use '#include' and 'extern' and header files to indicate where functions are defined.
+
+#what#external#NONE#
+The function implementation is specified in other file, which we called external function.
+
+#why#external#NONE
+In the large program project, to construct an efficient structure, functions will be classified into different files according to the relevance. In that case, those functions can be called one another in the way of external function.
+
+#when#external#NONE#
+if the function you want to call is in not involved in current file, you may use this idea.
+
+#NONE#NONE#math#
+For usage of math function in C, you may refer to
+ceil(), floor(), sqrt(), pow(), abs()
+
+#what#NONE#math#
+For usage of math function in C, you may refer to
+ceil(), floor(), sqrt(), pow(), abs()
+
+#how#NONE#math#
+If you want to use math function which is predefined in C, you need to include header file 'math.h'
+
+#why#NONE#NONE#
+Hiding information from user, which shows the principle of encapsulation.
+
+#how#declare#NONE#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#NONE#declare#NONE#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#what#NONE#prototype#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#NONE#NONE#prototype#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#how#declare#prototype#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#NONE#declare#prototype#
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#how#define#NONE#
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#NONE#define#NONE#
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#what#NONE#definition#
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#NONE#NONE#definition#
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#how#return#many#
+Function cannot return more than one value. Alternatively, You may use pointer or structure and pass argument by reference.
+
+#NONE#return#many#
+Function cannot return more than one value. Alternatively, You may use pointer or structure and pass argument by reference.
+
+#what#return#NONE#
+To terminate immediately the execution of a function and continues from the point where the function was called.
+
+#how#return#NONE#
+using keyword 'return'
+
+#what#return#type#
+Basically, function can return any valid type.
+
+#NONE#return#type#
+Basically, function can return any valid type.
+
+#NONE#argument#type#
+The argument can be any valid expression, such as constant, variable, math, or logical expression, even another function with a return value.
+
+#what#argument#type#
+The argument can be any valid expression, such as constant, variable, math, or logical expression, even another function with a return value.
+
+#how#argument#pass#
+1. Pass argument by value:
+Each parameter copies the value given to the function when it is called.
+Any change happens on the copy will not affect the original value.
+
+2. Pass argument by reference
+To change the value of a variable outside the function by using pointer.
+1) The memory address is passed by copy into a variable.
+2) This allows a function to simulate return multiple values!!
+
+#NONE#argument#pass#
+1. Pass argument by value:
+Each parameter copies the value given to the function when it is called.
+Any change happens on the copy will not affect the original value.
+
+2. Pass argument by reference
+To change the value of a variable outside the function by using pointer.
+1) The memory address is passed by copy into a variable.
+2) This allows a function to simulate return multiple values!!
+
+#NONE#NONE#stack#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#what#NONE#stack#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#how#NONE#stack#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.

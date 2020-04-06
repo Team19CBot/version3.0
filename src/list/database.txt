@@ -1,0 +1,409 @@
+#
+30000
+A chain of linked elements i.e. nodes. 
+Each node contains its data and a pointer to the next node in the chain. 
+The value of the pointer field in the last node must be equal to NULL.
+
+#
+10100
+struct list{
+	int value,
+	struct node *next;
+};
+
+#
+100
+struct list{
+	int value,
+	struct node *next;
+};
+
+#
+10200
+struct node{
+	int value,
+	struct node *next;
+};
+int main(){
+	struct node no1;
+	struct node *x;
+	no1.value=10; //make the value in no1 equals to 10
+	no1.next=NULL;
+	printf("%d\n", x->value); //will print out 10
+	return 0;
+}
+
+#
+10300
+struct node{
+	int value,
+	struct node *next;
+};
+int main(){
+	struct node no1;
+	struct node *x;
+	no1.value=10; //make the value in no1 equals to 10
+	no1.next=NULL;
+	printf("%d\n", x->value); //will print out 10
+	return 0;
+}
+
+#
+300
+struct node{
+	int value,
+	struct node *next;
+};
+int main(){
+	struct node no1;
+	struct node *x;
+	no1.value=10; //make the value in no1 equals to 10
+	no1.next=NULL;
+	printf("%d\n", x->value); //will print out 10
+	return 0;
+}
+
+#
+200
+struct node{
+	int value,
+	struct node *next;
+};
+int main(){
+	struct node no1;
+	struct node *x;
+	no1.value=10; //make the value in no1 equals to 10
+	no1.next=NULL;
+	printf("%d\n", x->value); //will print out 10
+	return 0;
+}
+
+#
+10400
+make the previous node's next point to the new node, and the new node's next point to the next node of the previous node.
+
+#
+400
+make the previous node's next point to the new node, and the new node's next point to the next node of the previous node.
+
+#
+10001
+make the previous node's next point to the new node, and the new node's next point to the next node of the previous node.
+
+#
+30001
+make the previous node's next point to the new node, and the new node's next point to the next node of the previous node.
+
+#
+1
+make the previous node's next point to the new node, and the new node's next point to the next node of the previous node.
+
+#
+2
+make the previous node's next point to the next node of the current node, let current node's next point to NULL, then you can delete the current node.
+
+#
+30002
+make the previous node's next point to the next node of the current node, let current node's next point to NULL, then you can delete the current node.
+
+#
+10002
+make the previous node's next point to the next node of the current node, let current node's next point to NULL, then you can delete the current node.
+
+#
+500
+make the previous node's next point to the next node of the current node, let current node's next point to NULL, then you can delete the current node.
+
+#
+10500
+make the previous node's next point to the next node of the current node, let current node's next point to NULL, then you can delete the current node.
+
+#
+30003
+Pointer to next element as with singly linked list. Also pointer to previous element as well. 
+Can access previous element just by using previous pointer. 
+It is more efficient navigation but more complex algorithms and larger storage requirements.
+For example:
+/* Node of a doubly linked list */
+struct doubly_list {
+	int data;
+	struct Node* next; // Pointer to next node in DLL
+	struct Node*
+	prev ; // Pointer to previous node in DLL
+};
+
+#
+3
+Pointer to next element as with singly linked list. Also pointer to previous element as well. 
+Can access previous element just by using previous pointer. 
+It is more efficient navigation but more complex algorithms and larger storage requirements.
+For example:
+/* Node of a doubly linked list */
+struct doubly_list {
+	int data;
+	struct Node* next; // Pointer to next node in DLL
+	struct Node*
+	prev ; // Pointer to previous node in DLL
+};
+
+#
+10103
+/* Node of a doubly linked list */
+struct doubly_list {
+	int data;
+	struct Node* next; // Pointer to next node in DLL
+	struct Node*
+	prev ; // Pointer to previous node in DLL
+};
+
+#
+103
+/* Node of a doubly linked list */
+struct doubly_list {
+	int data;
+	struct Node* next; // Pointer to next node in DLL
+	struct Node*
+	prev ; // Pointer to previous node in DLL
+};
+
+#
+10403
+Please type either questions below:
+how to add a node at the front in doubly list?
+how to add a node after a given node in doubly list?
+how to add a node at the end in doubly list?
+
+#
+403
+Please type either questions below:
+how to add a node at the front in doubly list?
+how to add a node after a given node in doubly list?
+how to add a node at the end in doubly list?
+
+#
+10603
+void insertBegining (struct Node** head_ref , int new_data )
+{
+	/* 1. allocate node */
+	struct Node* new_node = (struct Node*) malloc sizeof struct Node));
+	/* 2. put in the data */
+	new_node-->data = new_data ;
+	/* 3. Make next of new node as head and previous as NULL */
+	new_node-->next =(*head_ref );
+	new_node-->prev = NULL;
+	/* 4. change prev of head node to new node */
+	if ((*head_ref ) != NULL)
+	(*head_ref)-> prev = new_node ;
+	/* 5. move the head to point to the new node */
+	(*head_ref ) = new_node ;
+}
+
+#
+603
+how, front, doubly(double)
+void insertBegining (struct Node** head_ref , int new_data )
+{
+	/* 1. allocate node */
+	struct Node* new_node = (struct Node*) malloc sizeof struct Node));
+	/* 2. put in the data */
+	new_node-->data = new_data ;
+	/* 3. Make next of new node as head and previous as NULL */
+	new_node-->next =(*head_ref );
+	new_node-->prev = NULL;
+	/* 4. change prev of head node to new node */
+	if ((*head_ref ) != NULL)
+	(*head_ref)-> prev = new_node ;
+	/* 5. move the head to point to the new node */
+	(*head_ref ) = new_node ;
+}
+
+#
+703
+void insertAfter(struct Node* prev_node , int new_data )
+{
+	/*1. check if the given prev_node is NULL */
+	if (
+	prev_node == NULL) {
+	printf("the given previous node cannot be NULL");
+	return;
+	}
+	/* 2. allocate new node */
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+	/* 3. put in the data */
+	new_node-->data = new_data ;
+	/* 4. Make next of new node as next of prev_node*/
+	new_node-->next = prev_node -->next;
+	/* 5. Make the next ofprev_node as new_node*/
+	prev_node-->next = new_node ;
+	/* 6. Make prev_node as previous of new_node*/
+	new_node->prev = prev_node ;
+	/* 7. Change previous of new_node's next node */
+	if (new_node -->next != NULL)
+	new_node-->next->prev = new_node ;
+}
+
+#
+10703
+void insertAfter(struct Node* prev_node , int new_data )
+{
+	/*1. check if the given prev_node is NULL */
+	if (
+	prev_node == NULL) {
+	printf("the given previous node cannot be NULL");
+	return;
+	}
+	/* 2. allocate new node */
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+	/* 3. put in the data */
+	new_node-->data = new_data ;
+	/* 4. Make next of new node as next of prev_node*/
+	new_node-->next = prev_node -->next;
+	/* 5. Make the next ofprev_node as new_node*/
+	prev_node-->next = new_node ;
+	/* 6. Make prev_node as previous of new_node*/
+	new_node->prev = prev_node ;
+	/* 7. Change previous of new_node's next node */
+	if (new_node -->next != NULL)
+	new_node-->next->prev = new_node ;
+}
+
+#
+10803
+void addEnd (struct Node** head_ref , int new_data )
+{
+	/* 1. allocate node 
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+	struct Node* last = * head_ref ; /* used in step 5*/
+	/* 2. put in the data */
+	new_node-->data = new_data ;
+	/* 3. This new node is going to be the last node, so make next of it as NULL*/
+	new_node-->next = NULL;
+	/* 4. If the Linked List is empty, then make the new node as head */
+	if (*head_ref == NULL) {
+	new_node->prev = NULL;
+	*head_ref = new_node ;
+	return;
+	}
+	/* 5. Else traverse till the last node */
+	while (last-->next != NULL)
+	last = last-->next;
+	/* 6. Change the next of last node */
+	last-->next = new_node ;
+	/* 7. Make last node as previous of new node */
+	new_node->prev = last;
+	return;
+}
+
+#
+803
+void addEnd (struct Node** head_ref , int new_data )
+{
+	/* 1. allocate node 
+	struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));
+	struct Node* last = * head_ref ; /* used in step 5*/
+	/* 2. put in the data */
+	new_node-->data = new_data ;
+	/* 3. This new node is going to be the last node, so make next of it as NULL*/
+	new_node-->next = NULL;
+	/* 4. If the Linked List is empty, then make the new node as head */
+	if (*head_ref == NULL) {
+	new_node->prev = NULL;
+	*head_ref = new_node ;
+	return;
+	}
+	/* 5. Else traverse till the last node */
+	while (last-->next != NULL)
+	last = last-->next;
+	/* 6. Change the next of last node */
+	last-->next = new_node ;
+	/* 7. Make last node as previous of new node */
+	new_node->prev = last;
+	return;
+}
+
+#
+503
+void deleteNode (struct Node** head_ref , struct Node* del)
+{
+	/* base case */
+	if (*head_ref == NULL || del == NULL)
+	return;
+	/* If node to be deleted is head node */
+	if (*head_ref == del)
+	*head_ref = del -->next;
+	/* Change next only if node to be deleted is NOT the last node */
+	if (del-->next != NULL)
+	del-->next prev = del prev ;
+	/* Change prev only if node to be deleted is NOT the first node */
+	if (del->prev != NULL)
+	del->prev -->next = del -->next;
+	/* Finally, free the memory occupied by del*/
+	free(del);
+	return;
+}
+
+#
+10503
+void deleteNode (struct Node** head_ref , struct Node* del)
+{
+	/* base case */
+	if (*head_ref == NULL || del == NULL)
+	return;
+	/* If node to be deleted is head node */
+	if (*head_ref == del)
+	*head_ref = del -->next;
+	/* Change next only if node to be deleted is NOT the last node */
+	if (del-->next != NULL)
+	del-->next prev = del prev ;
+	/* Change prev only if node to be deleted is NOT the first node */
+	if (del->prev != NULL)
+	del->prev -->next = del -->next;
+	/* Finally, free the memory occupied by del*/
+	free(del);
+	return;
+}
+
+#
+10900
+void printList (struct Node* node)
+{
+	while(node != NULL) {
+	printf("%d ", node->data);
+	node= node->next;
+	}
+}
+
+#
+900
+void printList (struct Node* node)
+{
+	while(node != NULL) {
+	printf("%d ", node->data);
+	node= node->next;
+	}
+}
+
+#
+10903
+void printList (struct Node* node)
+{
+	while(node != NULL) {
+	printf("%d ", node->data);
+	node= node->next;
+	}
+}
+
+#
+903
+void printList (struct Node* node)
+{
+	while(node != NULL) {
+	printf("%d ", node->data);
+	node= node->next;
+	}
+}
+
+
+
+	
+

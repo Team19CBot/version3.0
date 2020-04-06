@@ -1,0 +1,22 @@
+#what#NONE#NONE#
+A container of objects that are inserted and removed according to the last in first out LIFO principle.
+
+#what#NONE#overflow#
+The amount of memory is finite in a computer, only a certain amount of memory can be used to store stack frames.
+If more function calls occur than the amount of memory for stack, it will cause fatal error.
+
+#NONE#NONE#overflow#
+The amount of memory is finite in a computer, only a certain amount of memory can be used to store stack frames.
+If more function calls occur than the amount of memory for stack, it will cause fatal error.
+
+#NONE#NONE#function#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#what#NONE#function#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#how#NONE#function#
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.

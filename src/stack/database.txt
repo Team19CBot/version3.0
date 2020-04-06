@@ -1,0 +1,28 @@
+#
+30000
+A container of objects that are inserted and removed according to the last in first out LIFO principle.
+
+#
+30001
+The amount of memory is finite in a computer, only a certain amount of memory can be used to store stack frames.
+If more function calls occur than the amount of memory for stack, it will cause fatal error.
+
+#
+1
+The amount of memory is finite in a computer, only a certain amount of memory can be used to store stack frames.
+If more function calls occur than the amount of memory for stack, it will cause fatal error.
+
+#
+2
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#
+30002
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#
+10002
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.

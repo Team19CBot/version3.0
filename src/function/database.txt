@@ -1,0 +1,214 @@
+#
+30001
+All C programs require a main function. Prgram starts at the beginning of main function and ends at the end of main function.
+For example,
+int main() {
+	...
+}
+or 
+int main(int argc, char *argv[]) {
+	...
+}
+
+#
+1
+All C programs require a main function. Prgram starts at the beginning of main function and ends at the end of main function.
+For example,
+int main() {
+	...
+}
+or 
+int main(int argc, char *argv[]) {
+	...
+}
+
+#
+30000
+1. Individual, stand-alone units of functionality
+2. Sequences of instructions that can act on different data
+3. Can take parameters (or arguments) as input
+4. Can return a value
+
+#
+10100
+Use '#include' and 'extern' and header files to indicate where functions are defined.
+
+#
+100
+Use '#include' and 'extern' and header files to indicate where functions are defined.
+
+#
+30100
+The function implementation is specified in other file, which we called external function.
+
+#
+20100
+In the large program project, to construct an efficient structure, functions will be classified into different files according to the relevance. In that case, those functions can be called one another in the way of external function.
+
+#
+40100
+if the function you want to call is in not involved in current file, you may use this idea.
+
+#
+2
+For usage of math function in C, you may refer to
+ceil(), floor(), sqrt(), pow(), abs()
+
+#
+30002
+For usage of math function in C, you may refer to
+ceil(), floor(), sqrt(), pow(), abs()
+
+#
+10002
+If you want to use math function which is predefined in C, you need to include header file 'math.h'
+
+#
+20000
+Hiding information from user, which shows the principle of encapsulation.
+
+#
+10200
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+200
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+30003
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+3
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+10203
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+203
+return_type function_name(parameter_list);
+For example,
+int myfunc(int num);
+
+#
+10300
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#
+300
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#
+30004
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#
+4
+return_type function_name(parameter_list) {
+/* Function body */ 
+}
+For example,
+int myfunc(void) {
+....
+}
+
+#
+10405
+Function cannot return more than one value. Alternatively, You may use pointer or structure and pass argument by reference.
+
+#
+405
+Function cannot return more than one value. Alternatively, You may use pointer or structure and pass argument by reference.
+
+#
+30400
+To terminate immediately the execution of a function and continues from the point where the function was called.
+
+#
+10400
+using keyword 'return'
+
+#
+30406
+Basically, function can return any valid type.
+
+#
+406
+Basically, function can return any valid type.
+
+#
+506
+The argument can be any valid expression, such as constant, variable, math, or logical expression, even another function with a return value.
+
+#
+30506
+The argument can be any valid expression, such as constant, variable, math, or logical expression, even another function with a return value.
+
+#
+10507
+1. Pass argument by value:
+Each parameter copies the value given to the function when it is called.
+Any change happens on the copy will not affect the original value.
+
+2. Pass argument by reference
+To change the value of a variable outside the function by using pointer.
+1) The memory address is passed by copy into a variable.
+2) This allows a function to simulate return multiple values!!
+
+#
+507
+1. Pass argument by value:
+Each parameter copies the value given to the function when it is called.
+Any change happens on the copy will not affect the original value.
+
+2. Pass argument by reference
+To change the value of a variable outside the function by using pointer.
+1) The memory address is passed by copy into a variable.
+2) This allows a function to simulate return multiple values!!
+
+#
+8
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#
+30008
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+
+#
+10008
+The compiler allocates memory (i.e. stack) to store the function’s parameters and the variables when the function is called.
+Once it’s terminated, the memory is automatically deallocated.
+

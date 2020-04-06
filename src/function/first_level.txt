@@ -1,0 +1,5 @@
+external
+declare declares declaration create creates
+define defines
+return returns
+argument arguments parameter parameters

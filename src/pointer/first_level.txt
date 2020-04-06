@@ -1,0 +1,14 @@
+type types
+array arrays
+null
+declare creates create declared declaration creation
+initialize initialization initialized initializes
+variable variables
+dereference dereferences dereferencing dereferenced
+change changed changes changing
+constant constants
+const
+string strings
+compare compares compared comparisons comparision
+struct structure structures
+increase increasing increases

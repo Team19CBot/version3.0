@@ -1,0 +1,8 @@
+create use uses creates initialize initializes declare declares
+global
+static
+access accesses
+get gets obtain obtains
+clean
+assign assigns assigned
+hide hiding hid hided

@@ -1,0 +1,113 @@
+#
+30000
+Structures aggregate a set of values into a single entity. 
+Unlike arrays, the elements of a structure or union may have different types. 
+You can have any data type inside a structure, e.g. pointer, arrays.
+You can pass them to and return them from functions.
+
+#
+10100
+structures are usually defined before the main function
+For example:
+struct struct_name {
+	type_1 name_1;
+	…;
+	type_n name_n ; 
+};
+
+#
+100
+structures are usually defined before the main function
+For example:
+struct struct_name {
+	type_1 name_1;
+	…;
+	type_n name_n ; 
+};
+
+#
+10300
+structures are usually defined before the main function
+For example:
+struct struct_name {
+	type_1 name_1;
+	…;
+	type_n name_n ; 
+};
+
+#
+10200
+structures are usually defined before the main function
+For example:
+struct struct_name {
+	type_1 name_1;
+	…;
+	type_n name_n ; 
+};
+
+#
+200
+structures are usually defined before the main function
+For example:
+struct struct_name {
+	type_1 name_1;
+	…;
+	type_n name_n ; 
+};
+
+#
+10400
+struct book {
+	char title[100];
+	int year;
+	float price;
+} book_1;
+then you can access book_1's price by book_1.price.
+
+#
+10500
+here are some methods to initialize the struct
+ strcpy (book_1.title, "programming"};
+ book_1.year = 2010;
+struct book book_1 = {"Literature", 2010,10.85}; //in this method, as with arrays, any unassigned fields are given the value 0.
+
+#
+500
+here are some methods to initialize the struct
+ strcpy (book_1.title, "programming"};
+ book_1.year = 2010;
+struct book book_1 = {"Literature", 2010,10.85}; //in this method, as with arrays, any unassigned fields are given the value 0.
+
+#
+10001
+use "->", you can use "person_ptr->age" or "(*person_ptr).age".
+
+#
+10600
+Similar to printing of structure, comparing can be done by comparing elements individually.
+use "((s1.code == s2.code) && (s1.grd == s2.grd))", BUT NOT "s1==s2".
+
+#
+10002
+Array of structure is a collection of structures, i.e. the same structure type.
+eg:
+struct letter{
+	char up;
+	char low;
+};
+
+int main(){
+struct letter alpha[26];
+for( int i=0; i<26;i++){
+	alpha[i].up=...;
+	alpha[i].low=...;
+	...
+	}
+}
+
+#
+30002
+Array of structure is a collection of structures, i.e. the same structure type.
+
+
+

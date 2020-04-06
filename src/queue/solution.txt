@@ -1,0 +1,2 @@
+#what#NONE#NONE#
+Queue is a data structure that follows the rule of 'first in first out'

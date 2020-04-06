@@ -1,0 +1,9 @@
+open opens opened opening
+close closes closing
+write writes writing wrote
+read reading reads
+binary
+eof
+sequential sequence sequences
+access accesses
+compile compiling compiled

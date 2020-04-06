@@ -1,0 +1,80 @@
+fopen
+fclose
+fputc
+fputs
+fprintf
+fgetc
+fgets
+fscanf
+printf
+getchar
+putchar
+gets
+puts
+scanf
+calloc
+free
+malloc
+realloc
+fread
+fwrite
+fseek
+ftell
+rewind
+perror
+feof
+stdargh
+eof
+goto
+exit
+atexit
+sigabrt
+sigfpe
+sigill
+sigint
+sigsegv
+define
+strlen
+sizeof
+strcpy
+strncpy
+strcat
+strcmp
+strncmp
+memcpy
+typedef
+program
+io
+language
+type
+iteration
+recursion
+x2go
+data
+sequence sequencing
+block scope
+ceil
+floor
+pow
+sqrt
+abs
+char chars character characters
+ascii
+memory
+heap
+void
+comment comments
+library libraries
+c
+keyword keywords
+mathh
+stdlibh
+stdioh
+marco
+cast casting
+warning warn
+bubble
+linear
+segmentation
+null
+precedence

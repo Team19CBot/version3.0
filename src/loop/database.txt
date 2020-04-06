@@ -1,0 +1,49 @@
+#
+30100
+Finite loop is a kind of loop which will eventually terminate by itself. 
+For example,
+for( int i=1;i<10 ;i++ ){        
+        printf("this will terminate");
+}
+
+
+
+#
+100
+Finite loop is a kind of loop which will eventually terminate by itself. 
+
+#
+200
+Infinite loop is a kind of loop which never terminate by itself.
+
+#
+30200
+Infinite loop is a kind of loop which never terminate by itself.
+For example:
+for( ; ; )
+{
+        printf("this will not terminate");
+}
+
+#
+10100
+Finite loop can be created by giving a condition that the program can reach.
+For example,
+int i=0;
+while(i==0)
+{      
+       printf("test");
+       i++;
+}
+
+#
+10200
+Infinite loop can be created by giving a condition that will always be true.
+For example,
+int i=0;
+while(i==0)
+{
+      printf("test");
+}
+
+

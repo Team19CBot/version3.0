@@ -1,0 +1,179 @@
+#what#NONE#NONE#
+A pointer is a variable whose value is the address of another variable, that is, the direct address of the memory location. 
+You must declare the addresses of other variables before using Pointers to store them. 
+
+#how#NONE#NONE#
+Example:
+int num = 3;
+int *p = &num // points to num memory
+*p = 4; // then num is 4
+
+#what#type#NONE#
+Any valid data type can be declared as pointer, such like
+int    *ip;    /* An integer pointer */
+double *dp;    /* A double pointer */
+float  *fp;    /* A float pointer */
+char   *ch;     /* A character pointer */
+It also works for function, struct and array.
+
+#how#array#NONE#
+The name of array is a pointer which points to the first element’s address.
+For example,
+
+int *p;
+int arr[2] = {1,2};
+p = arr;
+
+In fact, you can consider array's name as a pointer, and you can use any pointer operation via the name, such as passing it to a function
+
+#what#array#NONE#
+Every element in the array is a pointer to the same data type.
+char * arr [3]; //array of 3 pointers to arrays of characters
+Common use i.e. array of strings.
+
+#what#null#NONE#
+NULL is an empty pointer which points to nothing.
+
+#how#null#NONE#
+NULL is an empty pointer which points to nothing.
+NULL is usually used to initialize a pointer.
+For example,
+int *p = NULL;
+
+#when#null#NONE#
+When you initialize a pointer but do not know what pointer points to
+
+#why#null#NONE#
+null pointer provides a strategy when we do not know what pointer points to
+
+#how#declare#NONE#
+The format is type_name * pointer_name
+int *p = NULL;
+
+#how#initialize#NONE#
+int *p = NULL;
+OR
+int *p, a
+p = &a
+NOTE: Memory address operator is &
+
+#why#NONE#segmentation#
+Careful!!, If pointer is used without initialization, it can cause segmentation fault. If you dereference a NULL pointer, it can also cause segmentation fault. 
+
+#NONE#NONE#segmentation#
+Careful!!, If pointer is used without initialization, it can cause segmentation fault. If you dereference a NULL pointer, it can also cause segmentation fault. 
+
+#what#variable#NONE#
+A variable name directly references a value, a pointer indirectly references a value.
+for example,
+int num=50;
+int *ptr=&num; //suppose this int stores at position 1002
+Variable	Value in it
+num		50
+&num		1002
+ptr		1002
+*ptr		50
+Besides, Values can be changed. For pointer, the change of value means the change of location (where it is pointing to).
+
+#how#variable#NONE#
+A variable name directly references a value, a pointer indirectly references a value.
+for example,
+int num=50;
+int *ptr=&num; //suppose this int stores at position 1002
+Variable	Value in it
+num		50
+&num		1002
+ptr		1002
+*ptr		50
+Besides, Values can be changed. For pointer, the change of value means the change of location (where it is pointing to).
+
+#what#dereference#NONE#
+To read or write value at a given memory address.
+for example,
+int x=5;
+int *p;
+p=&x;
+printf("%d\n", *p); //dereference
+*p=7; //dereference
+
+#how#dereference#NONE#
+For example,
+int x=5; //constant
+int *p;
+p=&x;
+printf("%d\n", *p); //dereference
+*p=7; //dereference
+
+#how#change#value#
+pointer can be used to change data, Pointer to constant can NOT be used to change data.
+For example:
+const int x=5, y=7;
+int *p=&x;
+const int *py=&y;
+*p=8; //this one is ok
+*py=9;//this one does not be allowed
+
+#what#constant#NONE#
+Prohibits a pointer from changing the value of the variable it points to.
+for example: const int *ptr;
+
+#why#constant#NONE#
+Prohibits a pointer from changing the value of the variable it points to. 
+Useful when trying to catch changes to the value (which you don't want to) at compile time.
+
+#what#const#NONE#
+Prohibits a pointer from pointing to another variable. const Pointer can NOT change where it is pointed to.
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#why#const#NONE#
+Prohibits a pointer from pointing to another variable. 
+
+#how#increase#NONE#
+ptr + 1 moves the pointer by one memory space, i.e. according to the data type.
+eg: *int_p=*int_p+1;
+
+#what#string#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#how#string#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#NONE#string#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#how#NONE#plus#
+ptr=ptr+n; //n depends on the size of data type. char is 1 byte, etc.
+
+if want to minus two pointer, only if both point to the same data type, indicates the number of data items between them.
+eg:
+Suppose ptr1 and ptr2 point to two integer variables store in addresses 1000 and 1040 respectively
+(ptr2-ptr1) != (1040-1000) != 40
+(ptr2-ptr1) == (40 / 4) == 10 //"-" cannot be replaced by "+"
+
+#how#compare#NONE#
+Only if both point to members of the same data structure, you can use "=="," !=", ">","<“,“>="and "<=" to check if two pointers point to the same address.
+eg:
+if(ptr1 == ptr2) or if(ptr1 != ptr2)
+
+#how#struct#NONE#
+use "->", you can use "ptr->age" or "(*ptr).age".
+
+#how#declare#int#
+For example,
+int *p = NULL;
+
+#how#declare#float#
+For example,
+float *p = NULL;
+
+#how#declare#double#
+For example,
+double *p = NULL;
+
+#how#declare#char#
+For example,
+char *p = NULL;

@@ -1,0 +1,204 @@
+#
+10100
+You can use fopen() in following ways:
+
+// text file
+fopen(filename,"r"); // read file
+fopen(filename,"w"); // delete current content and write at the beginning, if not exist, create new one
+fopen(filename,"a"); // write at the end, if not exist, create new one
+fopen(filename,"r+"); // read or write at the beginning
+fopen(filename,"w+"); // read or write at the beginning, if not exist, create new one
+fopen(filename,"a+"); // read or write at the end, if not exist, create new one
+
+// binary file
+fopen(filename,"rb"); // read file
+fopen(filename,"wb"); // delete current content and write at the beginning, if not exist, create new one
+fopen(filename,"ab"); // write at the end, if not exist, create new one
+fopen(filename,"r+b"); // read or write at the beginning
+fopen(filename,"w+b"); // read or write at the beginning, if not exist, create new one
+fopen(filename,"a+b"); // read or write at the end, if not exist, create new one
+
+#
+100
+You can use fopen() in following ways:
+
+// text file
+fopen(filename,"r"); // read file
+fopen(filename,"w"); // delete current content and write at the beginning, if not exist, create new one
+fopen(filename,"a"); // write at the end, if not exist, create new one
+fopen(filename,"r+"); // read or write at the beginning
+fopen(filename,"w+"); // read or write at the beginning, if not exist, create new one
+fopen(filename,"a+"); // read or write at the end, if not exist, create new one
+
+// binary file
+fopen(filename,"rb"); // read file
+fopen(filename,"wb"); // delete current content and write at the beginning, if not exist, create new one
+fopen(filename,"ab"); // write at the end, if not exist, create new one
+fopen(filename,"r+b"); // read or write at the beginning
+fopen(filename,"w+b"); // read or write at the beginning, if not exist, create new one
+fopen(filename,"a+b"); // read or write at the end, if not exist, create new one
+
+#
+10200
+You can use fclose() which returns 0 if succeed, otherwise, it returns EOF
+
+char *filename = "myfile";
+...
+fclose(filename);
+
+#
+200
+You can use fclose() which returns 0 if succeed, otherwise, it returns EOF
+
+char *filename = "myfile";
+...
+fclose(filename);
+
+#
+300
+Please refer to the following function:
+fputc()
+fputs()
+fprintf()
+
+#
+10300
+Please refer to the following function:
+fputc()
+fputs()
+fprintf()
+
+#
+400
+Please refer to the following function:
+fgetc()
+fgets()
+fscanf()
+
+#
+10400
+Please refer to the following function:
+fgetc()
+fgets()
+fscanf()
+
+#
+30000
+A file is an object on a computer that stores data, information, settings, or commands used with a computer program.
+
+#
+30500
+Binary file can contain non-ASCII characters, such as image, audio, video, executable, etc.
+
+#
+30002
+Text file contains ASCII codes only.
+
+#
+1
+Random access in files is when you jump around the file, reading and writing different parts of the file out-of-order.
+Due to this, random access files are usually binary files.
+You may refer to these functions:
+fread()
+fwrite()
+fseek()
+ftell()
+rewind()
+
+#
+30001
+Random access in files is when you jump around the file, reading and writing different parts of the file out-of-order.
+Due to this, random access files are usually binary files.
+You may refer to these functions:
+fread()
+fwrite()
+fseek()
+ftell()
+rewind()
+
+#
+30801
+Random access in files is when you jump around the file, reading and writing different parts of the file out-of-order.
+Due to this, random access files are usually binary files.
+You may refer to these functions:
+fread()
+fwrite()
+fseek()
+ftell()
+rewind()
+
+#
+10801
+Random access in files is when you jump around the file, reading and writing different parts of the file out-of-order.
+Due to this, random access files are usually binary files.
+You may refer to these functions:
+fread()
+fwrite()
+fseek()
+ftell()
+rewind()
+
+#
+600
+While reading a text file, the EOF character can be checked to know the end.
+
+#
+30600
+While reading a text file, the EOF character can be checked to know the end.
+
+#
+3
+This is a global variable declared in errno.h, it will contain an error code describing what went wrong.
+You may use following function to print out error message:
+perror()
+
+#
+10003
+This is a global variable declared in errno.h, it will contain an error code describing what went wrong.
+You may use following function to print out error message:
+perror()
+
+#
+30003
+This is a global variable declared in errno.h, it will contain an error code describing what went wrong.
+You may use following function to print out error message:
+perror()
+
+#
+700
+Sequential file access opens the file and sets the current position within the file to the beginning or end if using "a“ modes.
+
+#
+30700
+Sequential file access opens the file and sets the current position within the file to the beginning or end if using "a“ modes.
+
+#
+904
+A program can consists of multiple source files. Multiple files in one program should be compiled together. 
+For example, 
+gcc filename1.c filename2.c.
+
+#
+10904
+A program can consists of multiple source files. Multiple files in one program should be compiled together. 
+For example, 
+gcc filename1.c filename2.c.
+
+#
+30005
+Standard libraries e.g. #include <stdio.h>
+Your own libraries e.g. #include “add.h”
+
+#
+10005
+Standard libraries e.g. #include <stdio.h>
+Your own libraries e.g. #include “add.h”
+
+#
+5
+Standard libraries e.g. #include <stdio.h>
+Your own libraries e.g. #include “add.h”
+
+
+
+

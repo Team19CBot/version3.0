@@ -1,0 +1,17 @@
+array
+string
+pointer
+variable
+statement
+file
+compile
+struct
+stack
+function
+list
+graph
+tree
+queue
+expression
+loop
+operat

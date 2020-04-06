@@ -1,0 +1,74 @@
+#how#NONE#NONE#
+A program can consists of multiple source files. Multiple files in one program should be compiled together. 
+For example, 
+gcc filename1.c filename2.c. -o output
+
+To run the program after compiling, enter:
+./output
+
+
+#what#NONE#NONE#
+Complier is used to translate high-level language such like C into low-level assembly language.
+
+#why#NONE#NONE#
+High-level language like C is human readable language which cannot be understood by machine, we need to translate it into a machine readable language via compiler.
+
+#how#NONE#multiple#
+A program can consists of multiple source files. Multiple files in one program should be compiled together. 
+For example, 
+gcc filename1.c filename2.c.
+
+#NONE#NONE#multiple#
+A program can consists of multiple source files. Multiple files in one program should be compiled together. 
+For example, 
+gcc filename1.c filename2.c.
+
+#how#use#library#
+Gcc provides several commands to using the third party libraries.
+gcc -I library name              used to access library in lib, /usr/lib and /usr/local/lib
+gcc -L the path of library      used to access library not in above folder
+
+#NONE#use#library#
+Gcc provides several commands to using the third party libraries.
+gcc -I library name              used to access library in lib, /usr/lib and /usr/local/lib
+gcc -L the path of library      used to access library not in above folder
+
+#NONE#NONE#library#
+Gcc provides several commands to using the third party libraries.
+gcc -I library name              used to access library in lib, /usr/lib and /usr/local/lib
+gcc -L the path of library      used to access library not in above folder
+
+#how#output#NONE#
+Adding command "-o outputName" after the normal command can specify the name of the output file.
+For example,
+gcc filename.c -o output.o
+
+#how#run#NONE#
+GCC command "./name" can be used to run the corresponding program.
+
+#what#output#NONE#
+The output file after compiling is an executable file, which can be used to run the program by command "./name"
+
+#NONE#output#NONE#
+The output file after compiling is an executable file.
+
+#NONE#NONE#command#
+basic command: 
+-E       After preprocessing, it stops, and does not compile, assemble or connect.
+-S       Compile after the stop, not assembly and connection.
+-C       Compiles or assembles source files, but does not connect.
+-o       Specify the output file.
+
+Gcc provides several commands to using the third party libraries:
+gcc -I libraryname              used to access library in lib, /usr/lib and /usr/local/libgcc -L thepathoflibrary      used to access library not in above folder
+
+#what#NONE#command#
+basic command: 
+-E       After preprocessing, it stops, and does not compile, assemble or connect.
+-S       Compile after the stop, not assembly and connection.
+-C       Compiles or assembles source files, but does not connect.
+-o       Specify the output file.
+
+Gcc provides several commands to using the third party libraries:
+gcc -I libraryname              used to access library in lib, /usr/lib and /usr/local/libgcc -L thepathoflibrary      used to access library not in above folder
+

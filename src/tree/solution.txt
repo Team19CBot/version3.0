@@ -1,0 +1,16 @@
+#what#NONE#NONE#
+Tree is an abstract data structure
+
+#how#NONE#NONE#
+struct Tree {
+	struct Tree *left;
+	struct Tree *right;
+	int nodes;
+};
+
+#how#create#NONE#
+struct Tree {
+	struct Tree *left;
+	struct Tree *right;
+	int nodes;
+};

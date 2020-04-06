@@ -1,0 +1,325 @@
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html charset=utf-8" />
+                <title>CBot</title>
+                <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+                <bookmark href="/favicon.ico"/>
+                <link rel = "stylesheet" href="css/layui.css" media="all">
+                        <script type="text/javascript"src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                        </head>
+        <body>
+                
+                <!-- 顶部三个按钮 --><!--add other two pages' address-->
+                <div>
+                        <ul class="layui-nav layui-bg-cyan" lay-filter="">
+                                <li class="layui-nav-item layui-this"><a href="">CBot</a></li>
+                                <li class="layui-nav-item"><a href="update.html">UPDATE</a></li>
+                                <li class="layui-nav-item"><a href="maintain.html">MAINTAIN</a></li>
+                        </ul>
+                </div>
+                
+                <!-- 聊天记录框 -->
+                <div  id="chatBox" class="layui-fluid" style="overflow:auto; height: 60%">
+                        <div>
+                                <img src="image/cbot.jpg" width="35px" height="35px"  style="position:absolute; top:7% ;left:1%; margin:auto"/>
+                                <div style="margin-left:3%; margin-top:2% ;border-style:outset ;border-radius:10px;border-color:#FFFAFA;max-width:300px;min-width:150px; display: inline-block;background-color:#f0f8ff ;text-align:center">Welcome!<br>what's your problem?</div>
+                        </div>
+                </div>
+                
+                <!-- 推荐词条 -->
+                <div  class="layui-fluid" style="height: 5%; margin: 0 auto ;border:1.5px solid #778899;  color:#FFFAFA ;background:#778899">
+                        Maybe you want to ask:
+                        <button type="button" onclick="ask(this)" value="pointer" class="layui-btn layui-btn-sm layui-btn-radius" style="margin-left:10px ;background:#ADD8E6; color:#FFFACD">Pointer</button>
+                        <button type="button" onclick="ask(this)" value="memory management"class="layui-btn layui-btn-sm layui-btn-radius" style="margin-left:15px;background:#ADD8E6 ;color:#FFFACD">Memory Management</button>
+                        <button type="button" onclick="ask(this)" value="Structure" class="layui-btn layui-btn-sm layui-btn-radius" style="margin-left:20px;background:#ADD8E6; color:#FFFACD">Structure</button>
+                </div>
+                
+                
+                <!-- 问题输入框 -->
+                
+                <div class="layui-form-item layui-form-text" style="left:1%" id="words">
+                        <textarea name="ques" id="question" placeholder="Please enter your question..." class="layui-textarea " maxlength="134"></textarea>
+                        <div class="layui-form-item" style="margin-left:93%">
+                                <button type="button" onclick="sendToCgi('Please wirte your question')" class="layui-btn" id="quesSubmit">Send(S)</button>
+                        </div>
+                </div>
+                
+                
+                
+                <script type = "text/javaScript">
+                        var question = $('#question').val();
+                        //是否退出
+                        window.onbeforeunload=function(){
+                                return window.confirm("are you sure to exit?");
+                        }
+                
+                var newBox=document.getElementById("chatBox");
+                //var returnedData;
+                
+                //快捷推荐词条方法
+                function ask(btn){
+                        var type=btn.value;
+                        document.getElementById("question").value=type;
+                }
+                
+                //post问题到后端
+                
+                document.onkeydown=function(event){
+                        if(event.keyCode==13){
+                                event.preventDefault();
+                                sendToCgi('Please wirte your question');
+                        }
+                }
+                function sendToCgi(date){
+                        var question = $('#question').val();
+                        var layer=document.createElement("div") ;
+                        layer.id="layer";
+                        var finalAnswer="";
+                        
+                        if(document.getElementById("layer")==null){
+                                //before click send button, user donot enter any question
+                                if(question.length==0)
+                                {
+                                        document.body.appendChild(layer);
+                                        layer.innerHTML=date;
+                                        layer.style.backgroundColor="#8A8A8A";
+                                        layer.style.position="absolute";
+                                        layer.style.zIndex=10;
+                                        layer.style.width="300px";
+                                        layer.style.height="80px";
+                                        layer.style.left="45%";
+                                        layer.style.top="50%";
+                                        layer.style.marginLeft="-100px";
+                                        layer.style.marginTop="-40px";
+                                        layer.style.textAlign="center";
+                                        layer.style.lineHeight="80px";
+                                        setTimeout("document.body.removeChild(layer)",2500);
+                                }
+                                else{
+                                        //post
+                                        $.ajax({
+                                               async:false,
+                                               type: 'POST',
+                                               url: '../cgi-bin/cgi_main.cgi',
+                                               data: question,
+                                               dataType: "text",
+                                               ContentType: "text/html;charset=utf-8",
+                                               success: function (returnedData,status) {
+                                               if(status=="success"){
+                                               //清空输入框
+                                               document.getElementById("question").value="";
+                                               //alert(question);
+                                               finalAnswer=returnedData;
+                                               }
+                                               },
+                                               error: function () {
+                                               alert("there is something wrong");
+                                               }
+                                               });
+                                               var newBox=document.getElementById("chatBox");
+                                               //display the question on the screen
+                                               var newQues=document.createElement("div");
+                                               // newQues.id="newQues";
+                                               newQues.style.height="auto!important";
+                                               newQues.style.height="70px";
+                                               newQues.style.minHeight="70px";
+                                               //newQues.height="auto";
+                                               newQues.style.position="relative";
+                                               newQues.setAttribute("text-align","left");
+                                               newQues.setAttribute("line-height","70px");
+                                               
+                                               
+                                               
+                                               //user's  picture
+                                               var user=document.createElement("img");
+                                               user.src="image/user.jpg";
+                                               var imgWidth=document.createAttribute("width");
+                                               imgWidth.value="50px";
+                                               var imgHeight=document.createAttribute("height");
+                                               imgHeight.value="50px";
+                                               user.setAttributeNode(imgWidth);
+                                               user.setAttributeNode(imgHeight);
+                                               user.style.position="absolute";
+                                               user.style.right="2%";
+                                               user.style.margin="auto";
+                                               
+                                               //user's question
+                                               var text=document.createElement("div");
+                                               text.setAttribute("word-wrap","break-word");
+                                               text.style.background="#9acd32";
+                                               text.style.position="absolute";
+                                               text.style.right="6%";
+                                               text.style.top="10%";
+                                               text.innerHTML=question;
+                                               text.style.textAlign="left";
+                                               text.style.lineHeight="30px";
+                                               text.style.maxWidth="400px";
+                                               text.style.minWidth="150px";
+                                               text.style.display="inline-block";
+                                               text.style.wordWrap="break-word";
+                                               text.style.borderStyle="outset";
+                                               text.style.borderColor="#66dd00";
+                                               text.style.borderRadius="10px";
+                                               newQues.appendChild(text);
+                                               newQues.appendChild(user);
+                                               
+                                               
+                                               newBox.appendChild(newQues);
+                                               newBox.scrollTop=newBox.scrollHeight;
+                                               
+                                               
+                                               //display the answer on the screen
+                                               var newAns=document.createElement("div");
+                                               newAns.id="newAns";
+                                               newAns.style.maxWidth="700px";
+                                               newAns.style.minWidth="250px";
+                                               newAns.style.display="inline-block";
+                                               //newAns.style.display="table";
+                                               newAns.style.minHeight="100px";
+                                               //newAns.style.display="inline";
+                                               newAns.style.position="relative";
+                                               
+                                               
+                                               
+                                               var cbot=document.createElement("img");
+                                               cbot.src="image/cbot.jpg";
+                                               var cbotWidth=document.createAttribute("width");
+                                               cbotWidth.value="35px";
+                                               var cbotHeight=document.createAttribute("height");
+                                               cbotHeight.value="35px";
+                                               cbot.setAttributeNode(cbotWidth);
+                                               cbot.setAttributeNode(cbotHeight);
+                                               cbot.style.position="relative";
+                                               
+                                               cbot.style.float="left";
+                                               cbot.stylemarginLleft="4px";
+                                               
+                                               newAns.appendChild(cbot);
+                                               
+                                               
+                                               var answer=document.createElement("div");
+                                               //answer.setAttribute("word-wrap","break-word");
+                                               answer.style.background="#f0f8ff";
+                                               answer.style.float="left";
+                                               answer.style.position="relative";
+                                               
+                                               
+                                               
+                                               setTimeout(function(){
+                                                          //将回答写入对话框
+                                                          answer.innerHTML=finalAnswer;
+                                                          answer.style.textAlign="left";
+                                                          answer.style.lineHeight="30px";
+                                                          answer.style.maxWidth="400px";
+                                                          answer.style.minWidth="150px";
+                                                          answer.style.display="inline-block";
+                                                          answer.style.wordWrap="break-word";
+                                                          answer.style.borderStyle="outset";
+                                                          answer.style.borderColor="#FFFAFA";
+                                                          answer.style.borderRadius="10px";
+                                                          answer.style.whiteSpace="pre-line";
+                                                          
+                                                          },1000);
+                                                          
+                                                          //more information
+                                                          var information=document.createElement("div");
+                                                          information.style.textAlign="center";
+                                                          var website=document.createElement("input");
+                                                          website.id="website";
+                                                          website.style.position="relative";
+                                                          website.style.marginLeft="1%";
+                                                          website.style.marginTop="3%";
+                                                          website.setAttribute("type","button");
+                                                          website.setAttribute("class","layui-btn layui-btn-sm layui-btn-radius");
+                                                          website.style.background="#ADD8E6";
+                                                          website.style.color="#FFFACD";
+                                                          website.value="more information";
+                                                          website.setAttribute("onclick","proveWebsite(this)");
+                                                          
+                                                          information.appendChild(website);
+                                                          
+                                                          
+                                                          
+                                                          
+                                                          setTimeout(function(){
+                                                                     
+                                                                     newAns.appendChild(answer);
+                                                                     newAns.appendChild(information);
+                                                                     newBox.appendChild(newAns);
+                                                                     // newBox.appendChild(information);
+                                                                     newBox.scrollTop=newBox.scrollHeight;
+                                                                     },1000);
+                                }
+                        }
+                }
+                
+                
+                
+                
+                function proveWebsite(btn){
+                        var moreInformation;
+                        //post
+                        /*$.ajax({
+                         async:false,
+                         type: 'POST',
+                         url: '../cgi-bin/cgi_main.cgi',//后端文件名 提供网站
+                         data: question,
+                         dataType: "text",
+                         ContentType: "text/html;charset=utf-8",
+                         success: function (returnedData,status) {
+                         if(status=="success"){
+                         
+                         //moreInformation=returnedData;
+                         }
+                         },
+                         error: function () {
+                         alert("there is something wrong");
+                         }
+                         });*/
+                        var newBegin=document.createElement("div");
+                        newBegin.id="newAns";
+                        newBegin.style.height="100px";
+                        newBegin.style.position="relative";
+                        
+                        
+                        
+                        var newCbot=document.createElement("img");
+                        newCbot.src="image/cbot.jpg";
+                        var cbotWidth=document.createAttribute("width");
+                        cbotWidth.value="35px";
+                        var cbotHeight=document.createAttribute("height");
+                        cbotHeight.value="35px";
+                        newCbot.setAttributeNode(cbotWidth);
+                        newCbot.setAttributeNode(cbotHeight);
+                        newCbot.style.position="relateve";
+                        newCbot.style.float="left";
+                        newBegin.appendChild(newCbot);
+                        
+                        
+                        var newAnswer=document.createElement("div");
+                        newAnswer.innerHTML="Click to get more information: <a href=\"https://www.w3cschool.cn/c/\" target=\"_blank\" style=\"textDecoration:underline\">https://www.w3cschool.cn/c/</a>";
+                        newAnswer.style.float="left";
+                        newAnswer.setAttribute("word-wrap","break-word");
+                        newAnswer.style.backgroundColor="#f0f8ff";
+                        
+                        newAnswer.style.top="10%";
+                        newAnswer.style.textAlign="left";
+                        newAnswer.style.lineHeight="30px";
+                        newAnswer.style.maxWidth="400px";
+                        newAnswer.style.minWidth="150px";
+                        
+                        newAnswer.style.borderStyle="outset";
+                        newAnswer.style.borderColor="#FFFAFA";
+                        newAnswer.style.borderRadius="10px";
+                        
+                        
+                        
+                        
+                        newBegin.appendChild(newAnswer);
+                        newBox.appendChild(newBegin);
+                        newBox.scrollTop=newBox.scrollHeight;
+                }
+                
+                        </script>
+        </body>
+</html>

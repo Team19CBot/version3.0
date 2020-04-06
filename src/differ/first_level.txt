@@ -1,0 +1,14 @@
+character characters
+float floating floats
+printf
+fgets
+fputs
+text texts
+array arrays
+function functions
+variable variables
+recursion recursions
+stack stacks
+getchar
+list lists
+c

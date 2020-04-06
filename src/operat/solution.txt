@@ -1,0 +1,75 @@
+#what#NONE#NONE#
+Operator in C basically is relational operators and arithmetic operators.
+
+#what#order#NONE#
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#NONE#order#NONE#
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#what#precedence#NONE#
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#NONE#precedence#NONE#
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence
+
+#what#memory#NONE#
+Memory address operator is &, which is used to obtain the memory address of variable.
+For example,
+int  i = 0;
+printf("%p", &i);
+
+#NONE#memory#NONE#
+Memory address operator is &, which is used to obtain the memory address of variable.
+For example,
+int  i = 0;
+printf("%p", &i);
+
+#what#relational#NONE#
+> < >= <= == !=
+Comparison of two values is done with double equals ==
+Not equals is !=
+For greater/less than or equals to, the equals sign must be the second character >= <=
+
+#NONE#relational#NONE#
+> < >= <= == !=
+Comparison of two values is done with double equals ==
+Not equals is !=
+For greater/less than or equals to, the equals sign must be the second character >= <=
+
+#NONE#math#NONE#
++-*/%()
+1)Be careful that some are not written the same as in maths (eg, ^ is not raising a number to a power)
+2)Assignment of a value is done with a single equal =
+3)Operations involving multiple types have explicit and implicit conversions.
+4)The types involved can influence the result of the expression.
+
+#what#math#NONE#
++-*/%()
+1)Be careful that some are not written the same as in maths (eg, ^ is not raising a number to a power)
+2)Assignment of a value is done with a single equal =
+3)Operations involving multiple types have explicit and implicit conversions.
+4)The types involved can influence the result of the expression.
+
+#what#NONE#dereference#
+Dereference operator is *
+
+#how#NONE#dereference#
+int b = 3
+int *p = b;
+*p = 4;
+
+Then b is 4
+
+#NONE#NONE#dereference#
+Dereference operator is *
+
+int b = 3
+int *p = b;
+*p = 4;
+
+Then b is 4

@@ -1,0 +1,202 @@
+#how#if#break#
+For example,
+
+if (i == 0)
+...
+
+you can set 'i' not equal to 0, then program won't enter above if statement
+
+#what#NONE#NONE#
+Statements is the sentence that programmers will use it to code. 
+For example:
+label statement
+compound statement
+selection statement
+iteration statement
+jump statement
+
+#what#condition#NONE#
+If the program checks the expression whether true or false, this is called condition statement
+
+#NONE#if#else#
+The structure is as follow:
+
+if (...) {
+...
+}
+else {
+
+}
+You can omit 'else' if necessary
+
+#how#if#else#
+The structure is as follow:
+
+if (...) {
+...
+}
+else {
+
+}
+You can omit 'else' if necessary
+
+#what#if#else#
+The structure is as follow:
+
+if (...) {
+...
+}
+else {
+
+}
+You can omit 'else' if necessary
+
+#how#if#multiple#
+if (...) {
+...
+}
+else if (...) {
+...
+}
+else {
+...
+}
+You can add many 'else if', or omitting 'else' at the end
+
+#what#elseif#NONE#
+if (...) {
+...
+}
+else if (...) {
+...
+}
+else {
+...
+}
+You can add many 'else if', or omitting 'else' at the end
+
+#how#elseif#NONE#
+if (...) {
+...
+}
+else if (...) {
+...
+}
+else {
+...
+}
+You can add many 'else if', or omitting 'else' at the end
+
+#NONE#nest#NONE#
+if (...) {
+	if (...) {
+
+	}
+	else {
+
+	}
+}
+You can nest as many statement as you want either in 'if' or 'else' field
+
+#what#nest#NONE#
+if (...) {
+	if (...) {
+
+	}
+	else {
+
+	}
+}
+You can nest as many statement as you want either in 'if' or 'else' field
+
+#how#nest#NONE#
+if (...) {
+	if (...) {
+
+	}
+	else {
+
+	}
+}
+You can nest as many statement as you want either in 'if' or 'else' field
+
+#NONE#if#NONE#
+int i = 3;
+if (i < 2) {
+	i = 1;
+}
+else {
+	i = 2;
+}
+
+#what#if#NONE#
+int i = 3;
+if (i < 2) {
+	i = 1;
+}
+else {
+	i = 2;
+}
+
+#why#NONE#NONE#
+Control statements can increase efficiency of programs.
+
+#what#NONE#continue#
+Continue statement will terminates the current iteration of a loop.
+For example, 
+int i;
+for(i = 1; i < 10; i++){
+if(i < 5)
+continue;
+printf("%d ", i);
+}
+it will display: 5 6 7 8 9
+
+#NONE#NONE#continue#
+Continue statement will terminates the current iteration of a loop.
+
+#how#NONE#continue#
+Add a continue statement on where you want to skip the current step.
+
+#how#NONE#break#
+Add a break statement on where you want to skip the whole loop.
+
+#NONE#NONE#break#
+Break statement will completely terminates a loop.
+
+#what#NONE#break#
+Break statement will completely terminates a loop.
+For example, 
+int i; 
+for(i = 1; i < 10; i++)
+{
+        if(i == 5)
+               break;
+        printf("%d ", i);
+}
+printf("End = %d\n", i);
+
+it will display: it will 1 2 3 4 End = 5
+
+#what#NONE#selection#
+1)If statement, do it if true
+2)if...else...statement, do one or the other
+3)switch statement, do 1 of many things
+
+#what#NONE#repetition#
+1)for loop, do something x times
+2)while loop, do something an unknown number of times
+3)do...while loop, variation of while loop
+4) All loops have a when they stop
+
+#what#NONE#label#
+Label statement is used with jump statement "goto"
+
+#what#NONE#goto#
+Jump statement is to jump to any instruction with corresponding label
+
+#what#NONE#compound#
+Compound statement is to use multiple condition statement together
+
+#what#NONE#iteration#
+Iteration statement usually is for, while loop

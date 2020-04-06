@@ -1,0 +1,12 @@
+string strings
+double doubles doubly
+scanf
+fgetc
+fputc
+binary
+pointer pointers
+data
+loop loops
+iteration iterations
+heaps heap
+java

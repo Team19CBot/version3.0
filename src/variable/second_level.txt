@@ -1,0 +1,5 @@
+scope scopes
+argument arguments parameter parameters
+type types
+pointer pointers
+principles principle

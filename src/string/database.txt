@@ -1,0 +1,75 @@
+#
+30000
+A series of characters that end with a special character, the null character '\0'
+
+#
+10001
+Like this way,
+char *name = "CBot";
+printf("%s\n", name);
+puts(name);
+
+#
+10100
+char str1[] = "CBot";
+char *str2 = "CBot";
+char str3[5] = {'C','B','o','t','\0'};
+
+#
+10200
+scanf(“%[^\n]”, str); // stop once it encounters a white space character or new line
+gets(str); // stop once it encounters a new line character
+
+#
+10300
+You may refer to the function:
+strlen()
+
+#
+30300
+You may refer to the function:
+strlen()
+
+#
+10400
+You may refer to the function:
+strcmp()
+strncmp()
+
+#
+10500
+You may refer to the function:
+strcpy()
+strncpy()
+strcat()
+
+#
+30600
+Each element in array is string, but usually it is some pointers point to char
+For example char *str[2]
+
+#
+10600
+char * str_arr[2] = {"ab","cd"};
+str_arr[0] is "ab"
+str_arr[1] is "cd"
+
+#
+30002
+String literals is usually read only, so you might not be able to modify its content.
+
+#
+702
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#
+30702
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#
+10702
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+

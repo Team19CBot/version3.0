@@ -1,0 +1,442 @@
+#
+1
+FILE *fopen( const char * filename, const char * mode );
+Open an exist file or create a new file. 
+Filename is the string that the named the file, mode can be one of “r”, “w”, “a”, “r+”, “w+”, “a+”. 
+if you are dealing with a binary file, you need to change the mode as “rb”, “wb”, etc.
+“r” is to open an exist file and allow to read it.
+“w” is to open a file and write from the beginning of the file. If the file does not exist, there will be created one.
+“a” is to open a file and write something which will add to the file’s end. If the file does not exist, there will be created one.
+“r+” is to open an exist file and allow to read and write it.
+“w+” is to open a file and write from the beginning of the file, which can read the file too. If the file does not exist, there will be created one.
+“a+” is to open a file and write something which will add to the file’s end, it also allows to read the file from beginning. If the file does not exist, there will be created one.
+
+#
+2
+int fclose( FILE *fp ); 
+If you successfully close the file, this function will return 0; else it will return EOF.
+
+#
+3
+int fputc(int num, FILE *fp)
+Write the character stored in num into the file. If this write operation is successful, it will return the character you write in, else it will return EOF.
+
+#
+4
+int fputs( const char *s, FILE *fp )
+Write a string which is ended by null into the file.
+If this write operation is successful, it will return a nonnegative number, else it will return EOF.
+
+#
+5
+int fprintf(FILE *fp,const char *format, ...) 
+Write a string into the file.
+For example:
+
+FILE *fp = NULL;
+ 
+   fp = fopen("/tmp/test.txt", "w+");
+   fprintf(fp, "This is testing for fprintf...\n");
+   fputs("This is testing for fputs...\n", fp);
+   fclose(fp);
+
+#
+6
+int fgetc( int c, FILE *fp )
+Read the character stored in c from the file. 
+If this read operation is successful, it will return the character you read in, else it will return EOF.
+
+#
+7
+int fgets( const char *s, FILE *fp )
+Read a string which is ended by null, length is n-1, from the file. 
+If the function read in a blank space or “\n” or EOF, it will stop read and return the characters it reads. 
+If this read operation is successful, it will return an non-negative number, else it will return EOF.
+
+#
+8
+int fscanf(FILE *fp,const char *format, ...) 
+Read a string into the file. 
+When read in a blank space or a “\n”, it will stop read.
+
+#
+9
+You must include <stdio.h> in your code, because printf() function needs this library to execute. 
+You must use corresponding expression. If you want to print out an integer, use “%d”, “%s” for string, “%c” for char, “%f” for float. 
+Printf print until ‘\0’.
+
+#
+10
+int getchar(void),
+Read in the character from screen, and return an integer. 
+It can only read in one character one time. When you press “enter”, the program will execute and only read one character. 
+You can put getchar() in a loop in order to read in multiple characters. 
+getchar() return the character which has read in as an integer.
+
+#
+11
+int putchar(int c) 
+Output one character to the screen, and return the same character which put on the screen as an integer. 
+
+#
+12
+char *gets(char *s) 
+Read a line from stdin to the buffer where s point to, until it read in an end symbol or EOF. 
+
+#
+13
+int puts(const char *s) writes the string which it reads in and a “\n” to the stdout.
+int puts(const char *s) will write a “\n” after the string has been put on the screen.
+
+#
+14
+When scanf() read in a blank space, it will stop reading. So it might can not read in a sentence.
+scanf is a formatted of reading input from the keyboard.
+For example,
+scanf("%d %d",&a,&b);
+
+#
+15
+1)Void *calloc(int num, int size);
+2)Num contiguous Spaces of size are dynamically allocated in memory and each byte is initialized to 0. 
+So the result is that num*size is allocated in bytes of memory, and each byte has a value of 0.
+
+#
+16
+1)Void free (void * address);
+2)This function frees the block of memory pointed to by the address, freeing up dynamically allocated memory space.
+
+#
+17
+1)Void * malloc (int num);
+2)Allocate a specified amount of memory space in the heap to hold data. This memory space is not initialized after the function completes, and their value is unknown.
+
+#
+18
+1)Void *realloc(void *address, int newsize);
+2)This function reallocates memory to newsize.
+
+#
+19
+It reads a given number of bytes from the file, starting at the current position.
+
+#
+20
+It writes a given number of bytes to the file, starting at the current position.
+
+#
+21
+It moves the current position in the file byte a given number of bytes from various reference points.
+SEEK_SET : then the position is the beginning of the file
+SEEK_END : used if you want to go to the end of the file
+SEEK_CUR : then the position is set, x bytes, from the current position.
+
+#
+22
+It tells the byte location of current position of cursor in file pointer.
+
+#
+23
+It moves the control to beginning of the file.
+
+#
+24
+prints out the appropriate error message for errno , plus any extra message 
+we supply as a parameter.
+
+#
+25
+returns true or false if the given file handle is at the end of file or not.
+
+#
+26
+stdarg.h is header file that allows function to accept variable arguments
+
+#
+27
+It means End of File
+
+#
+28
+For example:
+
+goto label;
+..
+.
+label: statement;
+
+It's not recommended to use goto syntax.
+
+#
+29
+exit() causes a program to terminate immediately. This function takes as argument an integer parameter or a symbolic constant like EXIT_SUCCESS or EXIT_FAILURE.
+
+The function is contained in 'stdlib.h'.
+
+#
+30
+atexit() registers a function that should be called when the program terminated by reaching the end of main or when exit is invoked. This function takes as an argument a pointer to a function (i.e., the function name).Any function previously registered with atexit() are invoked in the reverse order of their registration. The function called by atexit() cannot have any argument and return value.
+
+The function is contained in 'stdlib.h'.
+
+#
+31
+Abnormal termination of the program (such as a call to function abort).
+
+#
+32
+An erroneous arithmetic operation, such as divide-by-zero or and operation resulting in overflow.
+
+#
+33
+Detection of illegal instruction.
+
+#
+34
+Receipt of an interactive attention signal (<Ctrl> c or <Command> c).
+
+#
+35
+An attempt to access memory that is not allocated to a program SIGTERM A termination request sent to the program.
+
+#
+36
+Indicates preprocesses before compilation.
+
+#
+37
+used to calculate the length of a string, does not contain the null character.
+
+#
+38
+used to calculate the size of the buffer, which is settled when you initialize the variable, so that it will not change.
+
+#
+39
+strcpy(*dest, *src), dest is a pointer point to the address which you want to copy your string to, src is the pointer point to your origin string. 
+This function can copy &src to &dest, BUT you need to check whether dest is big enough before use it, or it might cause buffer overflow.
+
+#
+40
+strncpy(*dest, *src, count), if src is shorter than count, then the rest of dest will be filled by null character.
+if src is longer than count, then the string in dest will not end up by "\0". 
+However, this function will not cause buffer overflow.
+
+#
+41
+strcat(*dest, *src), will add the string src to the end of the string dest, and the size of space which dest point to is big enough to hold these two strings.
+
+#
+42
+int strcmp(const char* str1, const char* str2) will compare str1 and str2. 
+return 0 if str1==str2;
+return negative number if str1<str2
+return positive number if str1>str2
+
+#
+43
+int strncmp(const char* str1, const char* str2, int n), will compare str1 and str2, and will compare at most first n elements.
+
+#
+44
+void *memcpy(void *str1, const void *str2, size_t n), will copy n elements in str2 to the address of str1.
+
+#
+45
+Creates synonyms (or aliases) for previously defined data types.
+eg:typedef struct card Card;
+eg:typedef struct{...}Card;
+
+#
+46
+A program can be seen as code + data. 
+It contains a list of ingredients (called variables) and a list of directions (called statements) that tell the computer what to do with the variables. 
+The variables can represent numeric data, text, or graphical images.
+
+#
+47
+Input/Output (I/O) describes any operation, program, or device that transfers data to or from a computer. Typical I/O devices are printers, hard disks, keyboards, and mouses.
+
+#
+48
+A way of explaining to the computer what we want it to do.
+Allows us to express our needs at a level that is easy for us (humans) to understand.
+Different programming languages are designed to make different things easy to express.
+
+#
+49
+Types describe what a value is. Some type systems are more than others.
+Some languages require you to give the type, others try to work it out automatically.
+
+#
+50
+Iteration applies loop or iterator. It stops when condition fails, such like while, for loop.
+
+#
+51
+Generally, function applies recursion idea, which means a function calls itself and terminates under base case.
+
+#
+52
+This is what UNNC students use to edit, compile, and execute C programs in Linux environment.
+
+#
+53
+Data is stored in the form of variable.
+
+#
+54
+Simply, this means one line at a time going down the program. Instructions are executed one after another.
+
+#
+55
+{ } define the start and end of a block.
+1)A variable declared in a block is only inside that block.
+2) Each function defines a new block.
+3) Most instruction statements define new blocks.
+4) You can start a new block almost anywhere you can have an individual instruction.
+
+#
+56
+ceil() rounds up the given number. It returns the integer value which is greater than or equal to given number.
+For example, ceil(2.5) is 3
+
+#
+57
+floor() rounds down the given number. It returns the integer value which is less than or equal to given number.
+For example, floor(2.5) is 2
+
+#
+59
+sqrt() returns the square root of given number.
+For example, sqrt(4) is 2
+
+#
+58
+pow() returns the power of given number.
+For example, pow(2,3) is 8
+
+#
+60
+abs() returns the absolute value of given number.
+For example, abs(-2) is 2
+
+#
+61
+A character in the ASCII set is represented by an integer between 0 and 255.
+Null character is a special character, denoted as '\0'.
+Try following example code:
+char ch = ‘A’;
+printf(“Char = %c and its ASCII code is %d\n”, ch, ch);
+
+#
+62
+For more detail of ASCII code, you may refer to this web page:
+http://www.asciitable.com/
+
+#
+63
+You may want to ask some questions on Heap or malloc()?
+
+#
+64
+1) The segment where dynamic memory allocation usually takes place.
+2) Memory doesn’t get deallocated at the end of a function call.
+3) Manage by the programmer using e.g. malloc() and free()
+
+#
+65
+1. if a function returns nothing, the return type is void
+2. if a function has no argument list, the argument list is void
+
+#
+66
+1. single-line comment
+ // comment...
+2. multi-line comment
+/*
+comment
+*/
+
+#
+67
+Generally, it means function library where exists many common pre-defined function
+Example libraries in C: 
+math.h 
+stdio.h
+
+#
+68
+C is a statically typed, structured, general purpose computer programming language which has formed the basis for many other programming languages.
+To run a C program, you may use command after compile: ./a.out
+
+#
+69
+Keywords in C:
+auto, double, int, struct, break, else, long, switch,
+case, enum, register, typedef, char, extern, return,
+union, const, float, short, unsigned, continue, for,
+static, void, default, goto, sizeof, volatile, do,
+if, signed, while
+
+#
+70
+Some common mathematical functions are declared in the math.h header file.
+For example, pow() and abs()
+
+#
+71
+stdlib.h declares standard OS related function, such as macro, malloc()
+
+#
+72
+stdio.h declares standard I/O function, such as scanf() and printf()
+
+#
+73
+A macro is an abstraction that replaces certain text patterns with a set of predefined rules. 
+The compiler will automatically replace it when encoutering the macro.
+
+#
+74
+Convert the type of an expression to another type.
+For example,
+float a = 2.34;
+int b = (int)(a+2);
+
+#
+75
+Warning will not stop you from compiling.
+But best make sure to not have warnings in your programs!
+
+#
+76
+for (i = 0; i < n-1; ++ i) {
+for (j = 0; j < n-1; ++ j) {
+		if (array[j] > array[j+1]) {
+			temp = array[j];
+			array[j] = array[j+1];
+			array[j+1] = temp;
+		}
+	}
+}
+
+#
+77
+A sequential search, every item is checked until the end of the data collection or the item is found.
+
+#
+78
+Segmentation fault means the memory accessed exceeds the space allocated by system
+
+#
+79
+NULL is an empty pointer which points to nothing.
+NULL is usually used to initialize a pointer.
+For example,
+int *p = NULL;
+
+#
+80
+Copy and jump to following web page for more detail:
+https://en.cppreference.com/w/c/language/operator_precedence

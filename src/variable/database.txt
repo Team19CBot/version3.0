@@ -1,0 +1,148 @@
+#
+30000
+Variables in C language refer to the amount whose value can be changed when the program runs. The feature of variables is to store data.
+
+#
+20000
+Programmers use variables to store data.
+
+#
+10100
+The format is:
+data_type var_name = value
+For example, int a=1;
+
+#
+30200
+Global variable is variables defined outside of any function definition, which can be accessed by any functions defined in the same file after the variable is declared.
+
+#
+10200
+Global variables must be declared in each file in which they are used.
+
+#
+20200
+Because global variables can be accessed by every function in the same file. This can be used to store value needed to be valid during the whole process.
+
+#
+30001
+Scope is a range in which the variables or functions are valid. Variables can be divided into globle variables and local variables. 
+Global variables can be accessed by any functions defined in the same files, but local variables can only be accessed in its "scope". 
+For example, variables defined in a function can only be accessed in the function. 
+
+#
+10001
+Scope is a range in which the variables or functions are valid. 
+Global variables can be accessed by any functions defined in the same files, but local variables can only be accessed in its "scope". 
+
+#
+20001
+Scope is a range in which the variables or functions are valid. 
+Therefore, it can satisfy a variety of requirements. 
+Some variables may need to be valid during the whole process, while others do not need this. 
+By using concept "scope", the program can occupy less space, and avoid local variable being invoked by some irrelevant functions.
+
+#
+30300
+Static is a storage class specifier. When static applies to a global variable or
+a function, prevent it from being used by any function thats not defined in the same file.
+
+#
+10300
+By adding a specifier static before a variable, programmer can make it to be static.
+
+For example,
+static int a = 1;
+
+#
+30301
+Static variables only valid in one file. When static applies to a global variable or a function, prevent it from being used by any function that's not defined in the same file.
+
+#
+10102
+Return_typename_of_the_function(int argument_count, …)
+{
+// function definition
+}
+1)Declare a variable of type var_list to store the current state of the var-args.
+2)Initialize this with var_start.
+3)Call var_arg as many times as you need to get each var-arg value, specifying what type you want to treat the value as.
+4)Clean up after the var-args by calling var_end.
+
+#
+10402
+You can access the variable arguments by using macros in the stdarg.h header
+
+#
+10502
+Use var_arg macro and var_list variable to access each item in argument list.
+int average(int count, ...)
+{
+// ...
+int x = va_arg(ap, int);
+// ...
+}
+
+#
+10602
+Call var_end with the var_list variable.
+int average(int count, ...)
+{
+// ...
+var_end(ap);
+// ...
+}
+
+#
+10700
+int a = 100, b = 200, c = 300;
+int a = 100, b = a + 100, c = b + 100;
+Assignments take place from right to left, … but comma take place left to right
+
+#
+30800
+int total;
+int fun1(void){
+float total; /*this is a hidden variable*/
+....
+}
+
+#
+30003
+Whole numbers: int (+ short, long)
+Real numbers: float, double
+Characters: char
+Array types (more than 1 of the same thing) [ ] after the type
+
+#
+30004
+A variable name directly references a value, a pointer indirectly references a value.
+for example,
+int num=50;
+int *ptr=&num; //suppose this int stores at position 1002
+Variable	Value in it
+num		50
+&num		1002
+ptr		1002
+*ptr		50
+Besides, Values can be changed. For pointer, the change of value means the change of location (where it is pointing to).
+
+#
+10004
+A variable name directly references a value, a pointer indirectly references a value.
+for example,
+int num=50;
+int *ptr=&num; //suppose this int stores at position 1002
+Variable	Value in it
+num		50
+&num		1002
+ptr		1002
+*ptr		50
+Besides, Values can be changed. For pointer, the change of value means the change of location (where it is pointing to).
+
+#
+30205
+Principle of least privilege–code should grant the amount of privilege and access that is needed to accomplish its designated task, but no more.
+
+
+

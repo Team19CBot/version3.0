@@ -1,0 +1,56 @@
+#NONE#character#string#
+The string is an array of character ended with '/0' character
+
+#NONE#float#double#
+1)Represents different data types
+One is single precision floating point, the other is double precision floating point
+2)Single precision floating point significant digits guarantee 6 bits, part 7 bits
+Double precision floating point significant digits guarantee 15 bits, part 16 bits.
+3)Range of single precision floating point: -3.40e +38 ~ +3.40E+38
+Range of double precision floating point: -1.79e +308 ~ +1.79E+308
+
+#NONE#printf#scanf#
+The printf() function outputs characters to the console, and the scanf() function reads the user's input.
+
+#NONE#fgets#fgetc#
+Fgets is the input of a string, while fgetc is the input of a character.
+
+#NONE#fputs#fputc#
+The fputs() function outputs a string to the file
+The fputc() function is to enter a single character into a file
+
+#NONE#text#binary#
+The text file contains ASCII codes only, whereas binary file can contain non-ASCII characters, such as image, audio, video, executable, etc.
+
+#NONE#array#pointer#
+Actually, the name of array can be used as a pointer
+
+#NONE#function#pointer#
+Actually, the name of function can be used as a pointer
+
+#NONE#recursion#loop#
+1)A loop is a piece of code that does the same thing over and over again when certain conditions are met.Recursion is a function call itself.
+2)The loop itself takes up a fixed amount of memory, and the recursion takes up new memory each time it recurses.
+
+#NONE#recursion#iteration#
+Iteration applies loop or iterator. It stops when condition fails, such like while, for loop.
+Generally, function applies recursion idea, which means a function calls itself and terminates under base case.
+
+#NONE#variable#data#
+Variable has a name, type and value. The variable allows us to store data in program.
+
+#NONE#stack#heap#
+Stack often stores function arguments and local variable, memory is allocated by operating system and it will be free automatically.
+Heap is often created by programmer. It's responsibility of programmer to allocate and free memory. Generally, allocated memory will be collected after program termination.
+
+#NONE#getchar#scanf#
+scanf() is a formatted of reading input from the keyboard.
+getchar() reads a single character from the keyboard.
+
+#NONE#list#double#
+single linked list links one another in one direction, either 'next' or 'previous'
+double linked list links one another in two directions, both 'next' and 'previous' 
+
+#NONE#c#java#
+C is Process-Oriented Programming.
+java is Object-Oriented Programming.

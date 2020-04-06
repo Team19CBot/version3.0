@@ -1,0 +1,11 @@
+break breaks
+else
+multiple multiples
+continue
+selection selections
+repetition repetitions
+labeled label
+jump jumping
+compound
+iteration iterations
+goto

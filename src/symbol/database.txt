@@ -1,0 +1,87 @@
+#
+14
+a*b means a times b
+int *p means p is a pointer
+*p = 3 means dereference operation
+
+#
+15
+a/b means a divided by b
+
+#
+17
+a%b means the remainder of a divided by b
+
+#
+16
+&d means the memory address of variable d
+
+#
+1
+a++ means a increases 1
+++a means a increases 1
+
+a = 1;
+b = a++;
+so b is 1, a is 2
+
+a = 1
+b = ++a;
+so b is 2, a is 2
+
+#
+2
+a-- means a decreases 1
+--a means a decreases 1
+
+a = 1;
+b = a--;
+so b is 1, a is 0
+
+a = 1;
+b = --a;
+so b is 0, a is 0
+
+#
+3
+a += b means a = a + b
+
+#
+4
+a -= b means a = a - b
+
+#
+5
+a *= b means a = a * b
+
+#
+6
+a /= b means a = a/b
+
+#
+7
+int ** p means p is a pointer points to an int pointer.
+
+#
+8
+a = b means a is assigned with value of b
+
+#
+9
+a == b means check whether a, b are equal
+
+#
+10
+&& means AND
+
+#
+11
+|| means OR
+
+#
+12
+a + b means a plus b
+
+#
+13
+a - b means a minus b

@@ -1,0 +1,218 @@
+#
+10100
+For one-dimensional array, the format is:
+data_type array_name[length]
+For example, int arr[100];
+
+For multi-dimensional array, the format is:
+data_type array_name[1D_length][2D_length]..[nD_length]
+For example, float arr[2][3][4];
+
+#
+30000
+An array is a continuous block of memory to store values of the same type. The lowest address corresponding to the first element while the highest address corresponding to the last element. When you create an array, the length of the array cannot be changed
+
+#
+10200
+1) int arr[3] = {1,2,3};
+2) int arr[] = {1,2,3,4}; (not recommended)
+3) int arr[2];  
+   arr[0] = 3;
+   arr[1] = 2;
+
+#
+20301
+C does NOT check if the array index you try to access is valid! 
+The last element’s index is (size-1), also the index cannot be negative
+
+
+#
+10400
+void test(int arr[], int size){
+	...
+}
+int main(){
+	int arr[1] = {1};
+	test(arr,1);
+}
+
+#
+10500
+int* test(){
+        int *arr = (int*)malloc(1*sizeof(int));
+        return arr;
+}
+int main(){
+        int *arr = test();
+        arr[0] = 1;
+        free(arr);
+}
+
+#
+10700
+int arr[2][3] is a 2-dimensional array
+int arr[3][3][3] is a 3-dimensional array
+
+#
+10000
+You can access each element in array through index, for example
+
+arr[2] = {1,2};
+arr[1] is 2
+arr[0] is 1   
+The index is in the range of [0, length-1]
+
+#
+20000
+Array can store data with same type in an ordered way, it can easily obtain the size, and it can search each data quickly.
+
+#
+40000
+When you have to manipulate many data with same type, and you want to conduct lots of search but few insertion and deletion, then array is a good choice
+
+#
+10600
+The name of array is a pointer which points to the first element’s address.
+For example,
+
+int *p;
+int arr[2] = {1,2};
+p = arr;
+
+In fact, you can consider array's name as a pointer, and you can use any pointer operation via the name, such as passing it to a function
+
+#
+30600
+Every element in the array is a pointer to the same data type.
+char * arr [3]; //array of 3 pointers to arrays of characters
+Common use i.e. array of strings.
+
+#
+10800
+Array of structure is a collection of structures, i.e. the same structure type.
+
+struct letter{
+char up;
+char low;
+};
+
+struct letter alpha[26];
+for( int i=0; i<26;i++){
+alpha[i].up=...;
+alpha[i].low=...;
+...
+}
+
+#
+30800
+Array of structure is a collection of structures, i.e. the same structure type.
+
+#
+902
+For example: 
+int arr[3] = {10,12,182};
+Memory address		Content
+1
+2
+3
+..
+500				10
+501				12
+502				182
+..
+
+#
+30902
+For example: 
+int arr[3] = {10,12,182};
+Memory address		Content
+1
+2
+3
+..
+500				10
+501				12
+502				182
+..
+
+#
+1003
+The size of array cannot be changed dynamically after initialization.
+
+#
+11003
+The size of array cannot be changed dynamically after initialization.
+
+#
+21003
+The size of array cannot be changed dynamically after initialization.
+
+#
+11000
+For example, 
+int arr[] = {1,2,3}
+int size = sizeof(arr)/sizeof(int);
+
+#
+31000
+The length or size of array is the number of element that it can store.
+
+#
+1104
+Using index to refer access every element in array. Index range is from 0 to size-1.
+For example,
+int arr[2] = {1,2};
+arr[0] is 1, arr[1] is 2.
+If index is out of range, it will cause error - out of bound.
+
+#
+11104
+Using index to refer access every element in array. Index range is from 0 to size-1.
+For example,
+int arr[2] = {1,2};
+arr[0] is 1, arr[1] is 2.
+If index is out of range, it will cause error - out of bound.
+
+#
+31200
+Each element in array is string, but usually it is some pointers point to char
+
+#
+11200
+char * str_arr[2] = {"ab","cd"};
+str_arr[0] is "ab"
+str_arr[1] is "cd"
+
+#
+10105
+For example,
+int arr[3] = {1,2,3};
+
+#
+10106
+For example,
+double arr[1] = {1.0};
+
+#
+10107
+For example,
+float arr[1] = {1.0};
+
+#
+10109
+For example,
+char arr[1] = {'a'};
+
+#
+10008
+For example,
+int arr[3] = {1,2,3};
+You can use index to access elements in array such as arr[1] is 2
+
+#
+30008
+index is the location of every elements in array
+
+#
+30010
+Generally, array type can be declared as any valid data type.

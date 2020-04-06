@@ -1,0 +1,60 @@
+#what#NONE#NONE#
+A series of characters that end with a special character, the null character '\0'
+
+#how#NONE#print#
+Like this way,
+char *name = "CBot";
+printf("%s\n", name);
+puts(name);
+
+#how#create#NONE#
+char str1[] = "CBot";
+char *str2 = "CBot";
+char str3[5] = {'C','B','o','t','\0'};
+
+#how#read#NONE#
+scanf(“%[^\n]”, str); // stop once it encounters a white space character or new line
+gets(str); // stop once it encounters a new line character
+
+#how#size#NONE#
+You may refer to the function:
+strlen()
+
+#what#size#NONE#
+You may refer to the function:
+strlen()
+
+#how#compare#NONE#
+You may refer to the function:
+strcmp()
+strncmp()
+
+#how#add#NONE#
+You may refer to the function:
+strcpy()
+strncpy()
+strcat()
+
+#what#array#NONE#
+Each element in array is string, but usually it is some pointers point to char
+For example char *str[2]
+
+#how#array#NONE#
+char * str_arr[2] = {"ab","cd"};
+str_arr[0] is "ab"
+str_arr[1] is "cd"
+
+#what#NONE#literal#
+String literals is usually read only, so you might not be able to modify its content.
+
+#NONE#pointer#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#what#pointer#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"
+
+#how#pointer#literal#
+String literals is usually read only, so you might not be able to modify its content.
+eg: char * ptr = "This is text"

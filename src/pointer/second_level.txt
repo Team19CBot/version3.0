@@ -1,0 +1,9 @@
+segmentation segmentations
+relation relations relationship relationships
+data value values
+literals literal
+plus minus subtract subtracts subtracted
+int integer integers
+float floats floating
+double
+char chars character characters

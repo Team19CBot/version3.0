@@ -1,0 +1,70 @@
+#NONE#NONE#*#
+a*b means a times b
+int *p means p is a pointer
+*p = 3 means dereference operation
+
+#NONE#NONE#/#
+a/b means a divided by b
+
+#NONE#NONE#%#
+a%b means the remainder of a divided by b
+
+#NONE#NONE#&#
+&d means the memory address of variable d
+
+#NONE#NONE#++#
+a++ means a increases 1
+++a means a increases 1
+
+a = 1;
+b = a++;
+so b is 1, a is 2
+
+a = 1
+b = ++a;
+so b is 2, a is 2
+
+#NONE#NONE#--#
+a-- means a decreases 1
+--a means a decreases 1
+
+a = 1;
+b = a--;
+so b is 1, a is 0
+
+a = 1;
+b = --a;
+so b is 0, a is 0
+
+#NONE#NONE#+=#
+a += b means a = a + b
+
+#NONE#NONE#-=#
+a -= b means a = a - b
+
+#NONE#NONE#*=#
+a *= b means a = a * b
+
+#NONE#NONE#/=#
+a /= b means a = a/b
+
+#NONE#NONE#**#
+int ** p means p is a pointer points to an int pointer.
+
+#NONE#NONE#=#
+a = b means a is assigned with value of b
+
+#NONE#NONE#==#
+a == b means check whether a, b are equal
+
+#NONE#NONE#&&#
+&& means AND
+
+#NONE#NONE#||#
+|| means OR
+
+#NONE#NONE#+#
+a + b means a plus b
+
+#NONE#NONE#-#
+a - b means a minus b

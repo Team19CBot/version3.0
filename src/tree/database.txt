@@ -1,0 +1,20 @@
+#
+30000
+Tree is an abstract data structure
+
+#
+10000
+struct Tree {
+	struct Tree *left;
+	struct Tree *right;
+	int nodes;
+};
+
+#
+10100
+struct Tree {
+	struct Tree *left;
+	struct Tree *right;
+	int nodes;
+};
+
