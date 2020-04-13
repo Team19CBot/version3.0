@@ -135,7 +135,6 @@ string match(string que, topic_list* head){
         int size = que_arr.size();
         
         // check whether difference-related question
-        // KMP algorithm can be applied to improve effiency
         if (que.find("differ") != -1)
         {
                 string answer = asking_differ_question(que_arr);
@@ -181,6 +180,9 @@ string match(string que, topic_list* head){
                         return answer;
                 }
         }
+        
+        // monitor topic statistics
+        monitor_statistics(topic_name);
         
         // asking operator question
         if (topic_name == "operat")
@@ -699,4 +701,59 @@ int match_symbol(string que) {
                 in.close();
         }
         return match_value;
+}
+
+// split string package into each string
+// store each string in vector
+void split(const string& s,vector<string>& sv, char flag) {
+        sv.clear();
+        istringstream iss(s);
+        string temp;
+        
+        while (getline(iss, temp, flag)) {
+                sv.push_back(temp);
+        }
+        return;
+}
+
+// given topic name and update statistics file
+void monitor_statistics(string topic_name) {
+        string path_statistics = "./src/topic/statistics.txt";
+        string path_copy = "./src/topic/copy.txt";
+        
+        ifstream in(path_statistics);
+        ofstream out(path_copy);
+        
+        string str = "";
+        vector<string> target;
+        int find = 0;
+        
+        if (in.is_open() && out.is_open())
+        {
+                while (!in.eof())
+                {
+                        getline(in,str);
+                        if (find == 1)
+                        {
+                                out << str << endl;
+                        }
+                        else if (str.find(topic_name) != -1)
+                        {
+                                split(str,target,',');
+                                int frequency = stoi(target[1]);
+                                frequency++;
+                                target[1] = to_string(frequency);
+                                string new_statistics = target[0] + "," + target[1];
+                                out << new_statistics << endl;
+                                find = 1;
+                        }
+                        else {
+                                out << str << endl;
+                        }
+                }
+                in.close();
+                out.close();
+                remove(path_statistics.c_str());
+                rename(path_copy.c_str(),path_statistics.c_str());
+        }
 }

@@ -67,6 +67,22 @@ The index is in the range of [0, length-1]
 Array can store data with same type in an ordered way, it can easily obtain the size, and it can search each data quickly.
 
 #
+20100
+Array can store data with same type in an ordered way, it can easily obtain the size, and it can search each data quickly.
+
+#
+20200
+Array can store data with same type in an ordered way, it can easily obtain the size, and it can search each data quickly.
+
+#
+40100
+When you have to manipulate many data with same type, and you want to conduct lots of search but few insertion and deletion, then array is a good choice
+
+#
+40200
+When you have to manipulate many data with same type, and you want to conduct lots of search but few insertion and deletion, then array is a good choice
+
+#
 40000
 When you have to manipulate many data with same type, and you want to conduct lots of search but few insertion and deletion, then array is a good choice
 
@@ -216,3 +232,4 @@ index is the location of every elements in array
 #
 30010
 Generally, array type can be declared as any valid data type.
+
