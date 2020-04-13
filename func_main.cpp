@@ -726,16 +726,18 @@ void monitor_statistics(string topic_name) {
         
         string str = "";
         vector<string> target;
+        vector<string> temp;
         int find = 0;
         
-        if (in.is_open() && out.is_open())
+        if (in.is_open())
         {
                 while (!in.eof())
                 {
                         getline(in,str);
+                
                         if (find == 1)
                         {
-                                out << str << endl;
+                                temp.push_back(str);
                         }
                         else if (str.find(topic_name) != -1)
                         {
@@ -744,14 +746,29 @@ void monitor_statistics(string topic_name) {
                                 frequency++;
                                 target[1] = to_string(frequency);
                                 string new_statistics = target[0] + "," + target[1];
-                                out << new_statistics << endl;
+                                temp.push_back(new_statistics);
                                 find = 1;
                         }
                         else {
-                                out << str << endl;
+                                temp.push_back(str);
                         }
                 }
                 in.close();
+        }
+        
+        if (out.is_open())
+        {
+                for (int i=0; i<temp.size(); i++)
+                {
+                        if (i == temp.size()-1)
+                        {
+                                out << temp[i];
+                        }
+                        else
+                        {
+                                out << temp[i] << endl;
+                        }
+                }
                 out.close();
                 remove(path_statistics.c_str());
                 rename(path_copy.c_str(),path_statistics.c_str());
