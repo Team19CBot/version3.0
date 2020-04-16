@@ -1,2 +1,0 @@
-why to use global variable
-

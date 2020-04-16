@@ -1,3 +1,3 @@
 #
 30000
-Expression is just a expression
+Expression is consist of variable, constant and operator

@@ -1,7 +1,7 @@
 array,2
 string,0
-pointer,0
-variable,2
+pointer,2
+variable,0
 statement,0
 file,0
 compile,0
@@ -15,15 +15,3 @@ queue,0
 expression,0
 loop,0
 operat,0
-
-
-
-
-
-
-
-
-
-
-
-

@@ -127,28 +127,28 @@ Array of structure is a collection of structures, i.e. the same structure type.
 902
 For example: 
 int arr[3] = {10,12,182};
-Memory address		Content
+Address   Content
 1
 2
 3
 ..
-500				10
-501				12
-502				182
+500        10
+501        12
+502        182
 ..
 
 #
 30902
 For example: 
 int arr[3] = {10,12,182};
-Memory address		Content
+Address   Content
 1
 2
 3
 ..
-500				10
-501				12
-502				182
+500        10
+501        12
+502        182
 ..
 
 #

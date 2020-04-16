@@ -4,6 +4,6 @@ write writes writing wrote
 read reading reads
 binary
 eof
-sequential sequence sequences
+sequence sequential sequences
 access accesses
 compile compiling compiled

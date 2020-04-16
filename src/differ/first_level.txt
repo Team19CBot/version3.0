@@ -1,4 +1,4 @@
-character characters
+character characters char
 float floating floats
 printf
 fgets

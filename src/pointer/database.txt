@@ -148,6 +148,36 @@ For example,
 int* const ptr=&i; //need to be initialize when declare
 
 #
+11010
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
+10412
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
+11000
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
+10900
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
+10910
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
+10411
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#
 21000
 Prohibits a pointer from pointing to another variable. 
 

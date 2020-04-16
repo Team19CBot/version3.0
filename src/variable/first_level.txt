@@ -1,4 +1,4 @@
-create creates initialize initializes declare declares
+declare create creates initialize initializes declares
 global
 static
 access accesses

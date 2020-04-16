@@ -8,5 +8,5 @@ pointer pointers
 data
 loop loops
 iteration iterations
-heaps heap
+heap heaps
 java

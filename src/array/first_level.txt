@@ -1,10 +1,10 @@
 declare declared declares declaring
-initialize initializes initializing initialized create created creates
+create initialize initializes initializing initialized created creates
 bound bounds bounding bounded
-parameter argument arguments parameters
+argument parameter arguments parameters
 return returns
-point points pointing pointed pointer pointers
-2dimension 2dimensional dimensional multidimension dimension dimensions
+pointer points pointing pointed point pointers
+dimension 2dimension 2dimensional dimensional multidimension dimensions
 struct structure structures
 memory
 size length sizes lengths

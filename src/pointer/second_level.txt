@@ -1,9 +1,12 @@
 segmentation segmentations
 relation relations relationship relationships
-data value values
-literals literal
+value values
+literal literals
 plus minus subtract subtracts subtracted
 int integer integers
 float floats floating
 double
 char chars character characters
+declare creates create declared declaration creation
+constant constants
+const

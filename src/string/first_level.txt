@@ -1,6 +1,6 @@
 create creates creating initialize declare declaration initialization
 read reads
-length lengths size sizes
+size length lengths sizes
 compare compares
 add adds copy copies
 array arrays

@@ -4,7 +4,7 @@ multiple multiples
 continue
 selection selections
 repetition repetitions
-labeled label
+label
 jump jumping
 compound
 iteration iterations

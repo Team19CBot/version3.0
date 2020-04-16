@@ -9,6 +9,6 @@ change changed changes changing
 constant constants
 const
 string strings
-compare compares compared comparisons comparision
+compare compares compared comparisons
 struct structure structures
 increase increasing increases

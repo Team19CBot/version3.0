@@ -126,6 +126,30 @@ Prohibits a pointer from pointing to another variable. const Pointer can NOT cha
 For example,
 int* const ptr=&i; //need to be initialize when declare
 
+#how#const#declare#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#how#declare#const#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#how#const#NONE#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#how#constant#NONE#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#how#constant#declare#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
+#how#declare#constant#
+For example,
+int* const ptr=&i; //need to be initialize when declare
+
 #why#const#NONE#
 Prohibits a pointer from pointing to another variable. 
 

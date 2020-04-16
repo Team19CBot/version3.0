@@ -34,6 +34,21 @@ int main(){
 }
 
 #
+10000
+struct node{
+	int value,
+	struct node *next;
+};
+int main(){
+	struct node no1;
+	struct node *x;
+	no1.value=10; //make the value in no1 equals to 10
+	no1.next=NULL;
+	printf("%d\n", x->value); //will print out 10
+	return 0;
+}
+
+#
 10300
 struct node{
 	int value,
@@ -128,8 +143,7 @@ For example:
 struct doubly_list {
 	int data;
 	struct Node* next; // Pointer to next node in DLL
-	struct Node*
-	prev ; // Pointer to previous node in DLL
+	struct Node* prev ; // Pointer to previous node in DLL
 };
 
 #
@@ -142,8 +156,7 @@ For example:
 struct doubly_list {
 	int data;
 	struct Node* next; // Pointer to next node in DLL
-	struct Node*
-	prev ; // Pointer to previous node in DLL
+	struct Node* prev ; // Pointer to previous node in DLL
 };
 
 #
@@ -152,8 +165,7 @@ struct doubly_list {
 struct doubly_list {
 	int data;
 	struct Node* next; // Pointer to next node in DLL
-	struct Node*
-	prev ; // Pointer to previous node in DLL
+	struct Node* prev ; // Pointer to previous node in DLL
 };
 
 #
@@ -162,8 +174,7 @@ struct doubly_list {
 struct doubly_list {
 	int data;
 	struct Node* next; // Pointer to next node in DLL
-	struct Node*
-	prev ; // Pointer to previous node in DLL
+	struct Node* prev ; // Pointer to previous node in DLL
 };
 
 #
@@ -402,8 +413,3 @@ void printList (struct Node* node)
 	node= node->next;
 	}
 }
-
-
-
-	
-
