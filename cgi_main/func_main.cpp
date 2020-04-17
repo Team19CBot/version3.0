@@ -149,9 +149,6 @@ string match(string que, topic_list* head){
         // match topic words
         while (temp != NULL)
         {
-                // !!!
-                // find() can be replaced by KMP algorithm to improve effiency
-                // !!!!
                 if (que.find(temp->name) != -1)
                 {
                         topic_name = temp->name;
@@ -586,6 +583,7 @@ string function_usage_question(vector<string> que_arr) {
         
         if (topic->level2_head == NULL)
         {
+                delete topic;
                 return "Error: function_usage_question failure";
         }
         
@@ -600,10 +598,12 @@ string function_usage_question(vector<string> que_arr) {
         }
         if (match_val == 0)
         {
+                delete topic;
                 return "";
         }
         else
         {
+                delete topic;
                 return match_solution(match_val, "common");
         }
 }
@@ -725,32 +725,31 @@ void monitor_statistics(string topic_name) {
         ofstream out(path_copy);
         
         string str = "";
-        vector<string> target;
+        vector<string> statistics;
         vector<string> temp;
         int find = 0;
         
         if (in.is_open())
         {
-                while (!in.eof())
+                while(!in.eof())
                 {
-                        getline(in,str);
-                
+                        getline(in, str);
                         if (find == 1)
                         {
-                                temp.push_back(str);
+                                statistics.push_back(str);
                         }
                         else if (str.find(topic_name) != -1)
                         {
-                                split(str,target,',');
-                                int frequency = stoi(target[1]);
-                                frequency++;
-                                target[1] = to_string(frequency);
-                                string new_statistics = target[0] + "," + target[1];
-                                temp.push_back(new_statistics);
+                                split(str,temp, ',');
+                                int times = stoi(temp[1]);
+                                times++;
+                                temp[1] = to_string(times);
+                                string new_str = temp[0]+","+temp[1];
+                                statistics.push_back(new_str);
                                 find = 1;
                         }
                         else {
-                                temp.push_back(str);
+                                statistics.push_back(str);
                         }
                 }
                 in.close();
@@ -758,15 +757,15 @@ void monitor_statistics(string topic_name) {
         
         if (out.is_open())
         {
-                for (int i=0; i<temp.size(); i++)
+                for (int i=0; i<statistics.size();i++)
                 {
-                        if (i == temp.size()-1)
+                        if (i == statistics.size()-1)
                         {
-                                out << temp[i];
+                                out<<statistics[i];
                         }
                         else
                         {
-                                out << temp[i] << endl;
+                                out<<statistics[i]<<endl;
                         }
                 }
                 out.close();

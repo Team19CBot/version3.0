@@ -1,9 +1,9 @@
-array,2
+array,11
 string,0
-pointer,2
+pointer,7
 variable,0
 statement,0
-file,0
+file,1
 compile,0
 struct,0
 stack,0
